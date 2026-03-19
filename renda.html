@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT職涯發展參考：仁大資訊 vs 產品公司 vs AI公司</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang TC', 'Noto Sans TC', sans-serif;
+      background: #f5f7fa;
+      color: #2d3748;
+      line-height: 1.8;
+    }
+    .hero {
+      background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 100%);
+      color: white;
+      padding: 60px 24px 40px;
+      text-align: center;
+    }
+    .hero h1 { font-size: 1.8rem; font-weight: 700; margin-bottom: 12px; }
+    .hero p { font-size: 1rem; opacity: 0.85; }
+    .container { max-width: 800px; margin: 0 auto; padding: 32px 16px 60px; }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .card h2 {
+      font-size: 1.2rem;
+      color: #1a365d;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #ebf4ff;
+    }
+    .card h3 { font-size: 1rem; color: #2b6cb0; margin: 20px 0 8px; }
+    .card p { color: #4a5568; margin-bottom: 10px; }
+    .card ul { padding-left: 20px; color: #4a5568; }
+    .card ul li { margin-bottom: 6px; }
+    .highlight {
+      background: #ebf4ff;
+      border-left: 4px solid #2b6cb0;
+      border-radius: 0 8px 8px 0;
+      padding: 12px 16px;
+      margin: 12px 0;
+      color: #2c5282;
+      font-weight: 500;
+    }
+    .type-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+      margin-top: 8px;
+    }
+    .type-card {
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+    }
+    .type-card.si { background: #f0fff4; border: 2px solid #9ae6b4; }
+    .type-card.product { background: #ebf4ff; border: 2px solid #90cdf4; }
+    .type-card.ai { background: #faf5ff; border: 2px solid #d6bcfa; }
+    .type-card .icon { font-size: 2.2rem; margin-bottom: 8px; }
+    .type-card .company { font-size: 0.75rem; color: #718096; margin-bottom: 6px; }
+    .type-card .title { font-weight: 700; font-size: 1rem; margin-bottom: 8px; }
+    .type-card.si .title { color: #276749; }
+    .type-card.product .title { color: #2b6cb0; }
+    .type-card.ai .title { color: #6b46c1; }
+    .type-card .desc { font-size: 0.82rem; color: #4a5568; text-align: left; }
+    .type-card .desc li { margin-bottom: 4px; }
+    .skills-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px;
+    }
+    .skill-tag {
+      border-radius: 20px;
+      padding: 3px 12px;
+      font-size: 0.78rem;
+      font-weight: 500;
+    }
+    .skill-tag.green { background: #f0fff4; color: #276749; }
+    .skill-tag.blue { background: #ebf4ff; color: #2b6cb0; }
+    .skill-tag.purple { background: #faf5ff; color: #6b46c1; }
+    .compare-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 0.9rem; }
+    .compare-table th {
+      background: #ebf4ff;
+      color: #1a365d;
+      padding: 10px 12px;
+      text-align: center;
+      font-weight: 600;
+    }
+    .compare-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #e2e8f0;
+      text-align: center;
+      color: #4a5568;
+    }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table td:first-child { text-align: left; font-weight: 500; color: #2d3748; }
+    .path-box {
+      background: #f7fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 20px;
+      font-family: monospace;
+      font-size: 0.9rem;
+      color: #2d3748;
+      line-height: 2;
+    }
+    .path-arrow { color: #2b6cb0; font-weight: 700; }
+    .choice-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 8px;
+    }
+    .choice-box {
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .choice-box.stable { background: #f0fff4; border: 1px solid #9ae6b4; }
+    .choice-box.growth { background: #faf5ff; border: 1px solid #d6bcfa; }
+    .choice-box h4 { font-size: 0.9rem; margin-bottom: 8px; font-weight: 600; }
+    .choice-box.stable h4 { color: #276749; }
+    .choice-box.growth h4 { color: #6b46c1; }
+    .choice-box ul { padding-left: 16px; font-size: 0.85rem; color: #4a5568; }
+    .summary-box {
+      background: linear-gradient(135deg, #1a365d, #2b6cb0);
+      color: white;
+      border-radius: 12px;
+      padding: 28px;
+      text-align: center;
+    }
+    .summary-box p { opacity: 0.9; margin-bottom: 12px; }
+    .footer { text-align: center; color: #a0aec0; font-size: 0.8rem; padding: 20px; }
+    @media (max-width: 600px) {
+      .type-grid { grid-template-columns: 1fr; }
+      .choice-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>🧭 IT 職涯發展參考</h1>
+  <p>仁大資訊 vs 產品公司 vs AI公司<br>找到最適合你的下一步</p>
+</div>
+
+<div class="container">
+
+  <!-- 為什麼要了解 -->
+  <div class="card">
+    <h2>💡 為什麼要了解公司類型？</h2>
+    <div class="highlight">
+      不同類型的公司，會帶來完全不同的能力累積與發展方向。<br>
+      了解這些差異，可以幫助你更清楚規劃職涯下一步。
+    </div>
+  </div>
+
+  <!-- 三種類型 -->
+  <div class="card">
+    <h2>🏢 三種常見公司類型</h2>
+    <div class="type-grid">
+      <div class="type-card si">
+        <div class="icon">🔧</div>
+        <div class="company">代表：仁大資訊</div>
+        <div class="title">SI / IT服務公司</div>
+        <ul class="desc">
+          <li>協助企業建置系統</li>
+          <li>系統維運與支援</li>
+          <li>專案導向，可能需駐點</li>
+        </ul>
+        <div class="skills-row">
+          <span class="skill-tag green">Linux</span>
+          <span class="skill-tag green">Server</span>
+          <span class="skill-tag green">DB</span>
+        </div>
+      </div>
+      <div class="type-card product">
+        <div class="icon">📱</div>
+        <div class="company">代表：Gogolook</div>
+        <div class="title">產品型公司</div>
+        <ul class="desc">
+          <li>開發經營自有產品</li>
+          <li>持續優化使用者體驗</li>
+          <li>與 PM / Design / Data 合作</li>
+        </ul>
+        <div class="skills-row">
+          <span class="skill-tag blue">API設計</span>
+          <span class="skill-tag blue">Agile</span>
+          <span class="skill-tag blue">產品思維</span>
+        </div>
+      </div>
+      <div class="type-card ai">
+        <div class="icon">🤖</div>
+        <div class="company">代表：iKala</div>
+        <div class="title">AI / 數據公司</div>
+        <ul class="desc">
+          <li>AI / Data / Cloud 技術應用</li>
+          <li>高併發大型系統設計</li>
+          <li>技術與商業場景結合</li>
+        </ul>
+        <div class="skills-row">
+          <span class="skill-tag purple">分散式系統</span>
+          <span class="skill-tag purple">AI/ML</span>
+          <span class="skill-tag purple">Cloud</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 比較表 -->
+  <div class="card">
+    <h2>📊 三種類型比較</h2>
+    <table class="compare-table">
+      <tr>
+        <th>比較項目</th>
+        <th>SI（仁大資訊）</th>
+        <th>產品（Gogolook）</th>
+        <th>AI（iKala）</th>
+      </tr>
+      <tr>
+        <td>公司性質</td>
+        <td>接案 / 維運</td>
+        <td>自有產品</td>
+        <td>AI 解決方案</td>
+      </tr>
+      <tr>
+        <td>技術深度</td>
+        <td>⭐⭐</td>
+        <td>⭐⭐⭐⭐</td>
+        <td>⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+        <td>工作穩定性</td>
+        <td>⭐⭐⭐⭐</td>
+        <td>⭐⭐⭐</td>
+        <td>⭐⭐⭐</td>
+      </tr>
+      <tr>
+        <td>成長速度</td>
+        <td>⭐⭐</td>
+        <td>⭐⭐⭐⭐</td>
+        <td>⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+        <td>薪資潛力</td>
+        <td>⭐⭐</td>
+        <td>⭐⭐⭐⭐</td>
+        <td>⭐⭐⭐⭐⭐</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- 職涯路徑 -->
+  <div class="card">
+    <h2>🚀 常見職涯發展路徑</h2>
+    <div class="path-box">
+      <div>🔧 SI公司（仁大資訊）<span style="color:#718096">　→ 打好基礎，學維運</span></div>
+      <div class="path-arrow">　　↓</div>
+      <div>📱 產品公司（Gogolook / 91APP）<span style="color:#718096">　→ 建立產品思維</span></div>
+      <div class="path-arrow">　　↓</div>
+      <div>🤖 AI / 大型科技（iKala / Shopee / 外商）<span style="color:#718096">　→ 技術天花板高</span></div>
+    </div>
+    <p style="margin-top:12px; font-size:0.85rem; color:#718096;">
+      ⚡ 也可以從 SI 直接跳到 AI 公司，關鍵在於你的技術能力與自我學習
+    </p>
+  </div>
+
+  <!-- 如何選擇 -->
+  <div class="card">
+    <h2>🤔 如何選擇適合自己的公司？</h2>
+    <div class="choice-grid">
+      <div class="choice-box stable">
+        <h4>✅ 優先考慮穩定的人</h4>
+        <ul>
+          <li>剛出社會、需要建立基礎</li>
+          <li>偏好明確工作內容</li>
+          <li>重視工作與生活平衡</li>
+        </ul>
+        <p style="margin-top:8px; font-size:0.82rem; color:#276749; font-weight:600;">→ SI 公司入門，再往上跳</p>
+      </div>
+      <div class="choice-box growth">
+        <h4>🚀 追求成長的人</h4>
+        <ul>
+          <li>有一定技術基礎</li>
+          <li>想快速提升薪資</li>
+          <li>可接受高壓快節奏</li>
+        </ul>
+        <p style="margin-top:8px; font-size:0.82rem; color:#6b46c1; font-weight:600;">→ 直攻產品公司或 AI 公司</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 總結 -->
+  <div class="summary-box">
+    <p style="font-size:1.1rem; font-weight:700;">🔚 重點結論</p>
+    <p>SI 公司是好的起點，但不應該是終點。<br>了解自己的目標，選擇能讓你持續成長的環境。</p>
+    <p>👉 <strong>職涯發展的關鍵，不只是選公司，而是選對學習路徑。</strong></p>
+  </div>
+
+</div>
+
+<div class="footer">
+  由 Step1ne 獵頭顧問團隊整理 · 僅供人才參考使用
+</div>
+
+</body>
+</html>
