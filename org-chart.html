@@ -328,5 +328,246 @@
 
 </div>
 
+
+
+<style>
+  .flow-section {
+    max-width: 900px;
+    margin: 60px auto 0;
+    padding: 0 20px;
+  }
+  .flow-title {
+    text-align: center;
+    color: #1a365d;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .flow-subtitle {
+    text-align: center;
+    color: #718096;
+    font-size: 0.85rem;
+    margin-bottom: 28px;
+  }
+  .flow-steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+  .flow-step {
+    border-radius: 10px;
+    padding: 14px 16px;
+    text-align: center;
+    min-width: 110px;
+    max-width: 120px;
+  }
+  .flow-step .step-icon { font-size: 1.6rem; margin-bottom: 4px; }
+  .flow-step .step-name { font-weight: 700; font-size: 0.85rem; margin-bottom: 3px; }
+  .flow-step .step-desc { font-size: 0.72rem; color: #718096; line-height: 1.4; }
+  .flow-arrow {
+    font-size: 1.4rem;
+    color: #cbd5e0;
+    margin: 0 2px;
+    margin-bottom: 16px;
+  }
+  .flow-step.blue { background: #ebf4ff; border: 2px solid #90cdf4; }
+  .flow-step.blue .step-name { color: #2b6cb0; }
+  .flow-step.green { background: #f0fff4; border: 2px solid #9ae6b4; }
+  .flow-step.green .step-name { color: #276749; }
+  .flow-step.purple { background: #faf5ff; border: 2px solid #d6bcfa; }
+  .flow-step.purple .step-name { color: #6b46c1; }
+  .flow-step.orange { background: #fffaf0; border: 2px solid #fbd38d; }
+  .flow-step.orange .step-name { color: #c05621; }
+  .flow-step.teal { background: #e6fffa; border: 2px solid #81e6d9; }
+  .flow-step.teal .step-name { color: #234e52; }
+  .flow-step.red { background: #fff5f5; border: 2px solid #fc8181; }
+  .flow-step.red .step-name { color: #c53030; }
+  .flow-step.gold { background: #fffff0; border: 2px solid #f6e05e; }
+  .flow-step.gold .step-name { color: #744210; }
+
+  /* AI流程圖 */
+  .ai-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .ai-flow-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    border-radius: 10px;
+    padding: 14px 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  }
+  .ai-flow-who {
+    min-width: 90px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-align: center;
+    border-radius: 8px;
+    padding: 6px 8px;
+  }
+  .who-jacky { background: #ebf4ff; color: #2b6cb0; }
+  .who-yuqi { background: #e6fffa; color: #234e52; }
+  .who-hryuqi { background: #f0fff4; color: #276749; }
+  .who-mty { background: #fff5f5; color: #c53030; }
+  .who-haiai { background: #faf5ff; color: #6b46c1; }
+  .who-phoebe { background: #faf5ff; color: #553c9a; }
+  .who-mike { background: #f0fff4; color: #234e52; }
+  .who-hrmike { background: #fffaf0; color: #c05621; }
+  .ai-flow-action {
+    flex: 1;
+    font-size: 0.85rem;
+    color: #4a5568;
+    line-height: 1.6;
+  }
+  .ai-flow-arrow { color: #cbd5e0; font-size: 1.2rem; }
+  .section-divider2 {
+    text-align: center;
+    color: #a0aec0;
+    font-size: 0.8rem;
+    margin: 50px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+  .section-divider2::before, .section-divider2::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #e2e8f0;
+  }
+</style>
+
+<!-- 流程圖A：獵頭業務完整流程 -->
+<div class="flow-section">
+  <div class="section-divider2">獵頭業務完整流程</div>
+  <br>
+  <div class="flow-title">📋 獵頭顧問工作流程</div>
+  <div class="flow-subtitle">從 BD 開發到人選成功入職的完整閉環</div>
+
+  <div class="flow-steps">
+    <div class="flow-step blue">
+      <div class="step-icon">📞</div>
+      <div class="step-name">BD 開發</div>
+      <div class="step-desc">電話/LinkedIn<br>開發新客戶</div>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step blue">
+      <div class="step-icon">📄</div>
+      <div class="step-name">接收 JD</div>
+      <div class="step-desc">了解職缺需求<br>確認條件</div>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step purple">
+      <div class="step-icon">🔍</div>
+      <div class="step-name">搜尋人選</div>
+      <div class="step-desc">LinkedIn/爬蟲<br>資料庫搜尋</div>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step teal">
+      <div class="step-icon">🤖</div>
+      <div class="step-name">AI 初篩</div>
+      <div class="step-desc">MTY YuQi<br>自動評分匯入</div>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step orange">
+      <div class="step-icon">📞</div>
+      <div class="step-name">電話初篩</div>
+      <div class="step-desc">顧問親自<br>確認意願/薪資</div>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step green">
+      <div class="step-icon">📤</div>
+      <div class="step-name">送件推薦</div>
+      <div class="step-desc">匿名履歷<br>推薦給客戶</div>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step blue">
+      <div class="step-icon">🤝</div>
+      <div class="step-name">安排面試</div>
+      <div class="step-desc">協調時間<br>準備人選</div>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step gold">
+      <div class="step-icon">💰</div>
+      <div class="step-name">Offer 談判</div>
+      <div class="step-desc">薪資談判<br>條件確認</div>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step red">
+      <div class="step-icon">🎉</div>
+      <div class="step-name">成功入職</div>
+      <div class="step-desc">收取服務費<br>後續追蹤</div>
+    </div>
+  </div>
+</div>
+
+<!-- 流程圖B：AI龍蝦協作流程 -->
+<div class="flow-section" style="margin-bottom:60px;">
+  <div class="section-divider2" style="margin-top:50px;">AI 龍蝦協作流程</div>
+  <br>
+  <div class="flow-title">🦞 人類顧問 × AI 龍蝦 分工協作</div>
+  <div class="flow-subtitle">誰做什麼、什麼時候介入</div>
+
+  <div class="ai-flow">
+
+    <div class="ai-flow-row">
+      <div class="ai-flow-who who-jacky">👤 Jacky</div>
+      <div class="ai-flow-arrow">→</div>
+      <div class="ai-flow-action">打 BD 電話、接收客戶 JD、確認人選意願、談判 Offer、維繫客戶關係</div>
+    </div>
+
+    <div class="ai-flow-row">
+      <div class="ai-flow-who who-yuqi">🦞 YuQi</div>
+      <div class="ai-flow-arrow">→</div>
+      <div class="ai-flow-action">商模策略分析、準備話術/提案、匹配人選職缺、匯入職缺/人選卡片到 Step1ne 系統、支援所有臨時需求</div>
+    </div>
+
+    <div class="ai-flow-row">
+      <div class="ai-flow-who who-hryuqi">🦞 HR YuQi</div>
+      <div class="ai-flow-arrow">→</div>
+      <div class="ai-flow-action">監控 Step1ne 所有人選 Pipeline 狀態、追蹤需跟進案件、定期回報異常狀況</div>
+    </div>
+
+    <div class="ai-flow-row">
+      <div class="ai-flow-who who-mty">🦞 MTY YuQi</div>
+      <div class="ai-flow-arrow">→</div>
+      <div class="ai-flow-action">接收爬蟲進來的新人選 → AI 初篩評分 → 批量匯入人選卡片 → 整理資料格式</div>
+    </div>
+
+    <div class="ai-flow-row">
+      <div class="ai-flow-who who-haiai">🦞 HR AI 秘書</div>
+      <div class="ai-flow-arrow">→</div>
+      <div class="ai-flow-action">OpenClaw 監控爬蟲系統 → 自動抓取 LinkedIn/人才資料庫 → 即時推播新人選給 Jacky</div>
+    </div>
+
+    <div style="height:1px; background:#e2e8f0; margin:4px 0;"></div>
+
+    <div class="ai-flow-row">
+      <div class="ai-flow-who who-phoebe">👤 Phoebe</div>
+      <div class="ai-flow-arrow">→</div>
+      <div class="ai-flow-action">打 BD 電話、接收客戶 JD、確認人選意願、談判 Offer、維繫客戶關係</div>
+    </div>
+
+    <div class="ai-flow-row">
+      <div class="ai-flow-who who-mike">🦞 Mike</div>
+      <div class="ai-flow-arrow">→</div>
+      <div class="ai-flow-action">商模策略分析、多功能協作、匹配人選職缺、匯入人選卡片/職缺到 Step1ne 系統</div>
+    </div>
+
+    <div class="ai-flow-row">
+      <div class="ai-flow-who who-hrmike">🦞 HR Mike</div>
+      <div class="ai-flow-arrow">→</div>
+      <div class="ai-flow-action">支援 Phoebe 所有獵頭顧問需求、人選卡片匯入與維護、職缺管理、Pipeline 追蹤</div>
+    </div>
+
+  </div>
+</div>
+
 </body>
 </html>
