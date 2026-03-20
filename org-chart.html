@@ -443,67 +443,159 @@
   }
 </style>
 
-<!-- 流程圖A：獵頭業務完整流程 -->
+<!-- 流程圖A：獵頭業務完整流程（含龍蝦分工） -->
 <div class="flow-section">
   <div class="section-divider2">獵頭業務完整流程</div>
   <br>
-  <div class="flow-title">📋 獵頭顧問工作流程</div>
-  <div class="flow-subtitle">從 BD 開發到人選成功入職的完整閉環</div>
+  <div class="flow-title">📋 獵頭顧問工作流程 × AI 龍蝦分工</div>
+  <div class="flow-subtitle">每個步驟由誰負責、龍蝦如何支援</div>
 
-  <div class="flow-steps">
-    <div class="flow-step blue">
-      <div class="step-icon">📞</div>
-      <div class="step-name">BD 開發</div>
-      <div class="step-desc">電話/LinkedIn<br>開發新客戶</div>
+  <div style="overflow-x:auto; padding-bottom:20px;">
+  <div style="display:flex; gap:0; align-items:flex-start; min-width:900px;">
+
+    <!-- 步驟1 BD開發 -->
+    <div style="display:flex; flex-direction:column; align-items:center; flex:1;">
+      <div class="flow-step blue" style="width:100%;">
+        <div class="step-icon">📞</div>
+        <div class="step-name">BD 開發</div>
+        <div class="step-desc">電話/LinkedIn<br>開發新客戶</div>
+      </div>
+      <div style="width:2px;height:16px;background:#cbd5e0;"></div>
+      <div style="background:#ebf4ff;border:1.5px solid #90cdf4;border-radius:8px;padding:8px;width:100%;font-size:0.72rem;text-align:left;">
+        <div style="font-weight:700;color:#2b6cb0;margin-bottom:3px;">🦞 YuQi</div>
+        <div style="color:#4a5568;">準備話術<br>查公司資料<br>整理目標名單</div>
+      </div>
     </div>
-    <div class="flow-arrow">→</div>
-    <div class="flow-step blue">
-      <div class="step-icon">📄</div>
-      <div class="step-name">接收 JD</div>
-      <div class="step-desc">了解職缺需求<br>確認條件</div>
+
+    <div class="flow-arrow" style="margin-top:45px;">→</div>
+
+    <!-- 步驟2 接收JD -->
+    <div style="display:flex; flex-direction:column; align-items:center; flex:1;">
+      <div class="flow-step blue" style="width:100%;">
+        <div class="step-icon">📄</div>
+        <div class="step-name">接收 JD</div>
+        <div class="step-desc">了解需求<br>確認條件</div>
+      </div>
+      <div style="width:2px;height:16px;background:#cbd5e0;"></div>
+      <div style="background:#ebf4ff;border:1.5px solid #90cdf4;border-radius:8px;padding:8px;width:100%;font-size:0.72rem;text-align:left;">
+        <div style="font-weight:700;color:#2b6cb0;margin-bottom:3px;">🦞 YuQi</div>
+        <div style="color:#4a5568;">匯入職缺<br>至 Step1ne<br>設定搜尋條件</div>
+      </div>
     </div>
-    <div class="flow-arrow">→</div>
-    <div class="flow-step purple">
-      <div class="step-icon">🔍</div>
-      <div class="step-name">搜尋人選</div>
-      <div class="step-desc">LinkedIn/爬蟲<br>資料庫搜尋</div>
+
+    <div class="flow-arrow" style="margin-top:45px;">→</div>
+
+    <!-- 步驟3 搜尋人選 -->
+    <div style="display:flex; flex-direction:column; align-items:center; flex:1;">
+      <div class="flow-step purple" style="width:100%;">
+        <div class="step-icon">🔍</div>
+        <div class="step-name">搜尋人選</div>
+        <div class="step-desc">爬蟲/資料庫<br>搜尋比對</div>
+      </div>
+      <div style="width:2px;height:16px;background:#cbd5e0;"></div>
+      <div style="background:#faf5ff;border:1.5px solid #d6bcfa;border-radius:8px;padding:8px;width:100%;font-size:0.72rem;text-align:left;">
+        <div style="font-weight:700;color:#6b46c1;margin-bottom:3px;">🦞 HR AI 秘書</div>
+        <div style="color:#4a5568;">OpenClaw 爬蟲<br>自動抓取人選<br>推播新名單</div>
+      </div>
     </div>
-    <div class="flow-arrow">→</div>
-    <div class="flow-step teal">
-      <div class="step-icon">🤖</div>
-      <div class="step-name">AI 初篩</div>
-      <div class="step-desc">MTY YuQi<br>自動評分匯入</div>
+
+    <div class="flow-arrow" style="margin-top:45px;">→</div>
+
+    <!-- 步驟4 AI初篩 -->
+    <div style="display:flex; flex-direction:column; align-items:center; flex:1;">
+      <div class="flow-step teal" style="width:100%;">
+        <div class="step-icon">🤖</div>
+        <div class="step-name">AI 初篩</div>
+        <div class="step-desc">自動評分<br>匯入卡片</div>
+      </div>
+      <div style="width:2px;height:16px;background:#cbd5e0;"></div>
+      <div style="background:#e6fffa;border:1.5px solid #81e6d9;border-radius:8px;padding:8px;width:100%;font-size:0.72rem;text-align:left;">
+        <div style="font-weight:700;color:#234e52;margin-bottom:3px;">🦞 MTY YuQi</div>
+        <div style="color:#4a5568;">AI 評分 0-100<br>批量建立<br>人選卡片</div>
+      </div>
     </div>
-    <div class="flow-arrow">→</div>
-    <div class="flow-step orange">
-      <div class="step-icon">📞</div>
-      <div class="step-name">電話初篩</div>
-      <div class="step-desc">顧問親自<br>確認意願/薪資</div>
+
+    <div class="flow-arrow" style="margin-top:45px;">→</div>
+
+    <!-- 步驟5 電話初篩 -->
+    <div style="display:flex; flex-direction:column; align-items:center; flex:1;">
+      <div class="flow-step orange" style="width:100%;">
+        <div class="step-icon">📞</div>
+        <div class="step-name">電話初篩</div>
+        <div class="step-desc">確認意願<br>了解薪資</div>
+      </div>
+      <div style="width:2px;height:16px;background:#cbd5e0;"></div>
+      <div style="background:#fffaf0;border:1.5px solid #fbd38d;border-radius:8px;padding:8px;width:100%;font-size:0.72rem;text-align:left;">
+        <div style="font-weight:700;color:#c05621;margin-bottom:3px;">👤 顧問親自</div>
+        <div style="color:#4a5568;">YuQi 準備<br>初篩問題<br>更新系統紀錄</div>
+      </div>
     </div>
-    <div class="flow-arrow">→</div>
-    <div class="flow-step green">
-      <div class="step-icon">📤</div>
-      <div class="step-name">送件推薦</div>
-      <div class="step-desc">匿名履歷<br>推薦給客戶</div>
+
+    <div class="flow-arrow" style="margin-top:45px;">→</div>
+
+    <!-- 步驟6 送件推薦 -->
+    <div style="display:flex; flex-direction:column; align-items:center; flex:1;">
+      <div class="flow-step green" style="width:100%;">
+        <div class="step-icon">📤</div>
+        <div class="step-name">送件推薦</div>
+        <div class="step-desc">匿名履歷<br>推薦客戶</div>
+      </div>
+      <div style="width:2px;height:16px;background:#cbd5e0;"></div>
+      <div style="background:#f0fff4;border:1.5px solid #9ae6b4;border-radius:8px;padding:8px;width:100%;font-size:0.72rem;text-align:left;">
+        <div style="font-weight:700;color:#276749;margin-bottom:3px;">🦞 YuQi</div>
+        <div style="color:#4a5568;">產生匿名<br>履歷摘要<br>寄送 Email</div>
+      </div>
     </div>
-    <div class="flow-arrow">→</div>
-    <div class="flow-step blue">
-      <div class="step-icon">🤝</div>
-      <div class="step-name">安排面試</div>
-      <div class="step-desc">協調時間<br>準備人選</div>
+
+    <div class="flow-arrow" style="margin-top:45px;">→</div>
+
+    <!-- 步驟7 安排面試 -->
+    <div style="display:flex; flex-direction:column; align-items:center; flex:1;">
+      <div class="flow-step blue" style="width:100%;">
+        <div class="step-icon">🤝</div>
+        <div class="step-name">安排面試</div>
+        <div class="step-desc">協調時間<br>準備人選</div>
+      </div>
+      <div style="width:2px;height:16px;background:#cbd5e0;"></div>
+      <div style="background:#ebf4ff;border:1.5px solid #90cdf4;border-radius:8px;padding:8px;width:100%;font-size:0.72rem;text-align:left;">
+        <div style="font-weight:700;color:#2b6cb0;margin-bottom:3px;">🦞 YuQi</div>
+        <div style="color:#4a5568;">更新 Pipeline<br>準備面試<br>注意事項</div>
+      </div>
     </div>
-    <div class="flow-arrow">→</div>
-    <div class="flow-step gold">
-      <div class="step-icon">💰</div>
-      <div class="step-name">Offer 談判</div>
-      <div class="step-desc">薪資談判<br>條件確認</div>
+
+    <div class="flow-arrow" style="margin-top:45px;">→</div>
+
+    <!-- 步驟8 Offer談判 -->
+    <div style="display:flex; flex-direction:column; align-items:center; flex:1;">
+      <div class="flow-step gold" style="width:100%;">
+        <div class="step-icon">💰</div>
+        <div class="step-name">Offer 談判</div>
+        <div class="step-desc">薪資談判<br>條件確認</div>
+      </div>
+      <div style="width:2px;height:16px;background:#cbd5e0;"></div>
+      <div style="background:#fffff0;border:1.5px solid #f6e05e;border-radius:8px;padding:8px;width:100%;font-size:0.72rem;text-align:left;">
+        <div style="font-weight:700;color:#744210;margin-bottom:3px;">👤 顧問親自</div>
+        <div style="color:#4a5568;">YuQi 提供<br>市場薪資<br>參考數據</div>
+      </div>
     </div>
-    <div class="flow-arrow">→</div>
-    <div class="flow-step red">
-      <div class="step-icon">🎉</div>
-      <div class="step-name">成功入職</div>
-      <div class="step-desc">收取服務費<br>後續追蹤</div>
+
+    <div class="flow-arrow" style="margin-top:45px;">→</div>
+
+    <!-- 步驟9 成功入職 -->
+    <div style="display:flex; flex-direction:column; align-items:center; flex:1;">
+      <div class="flow-step red" style="width:100%;">
+        <div class="step-icon">🎉</div>
+        <div class="step-name">成功入職</div>
+        <div class="step-desc">收取服務費<br>後續追蹤</div>
+      </div>
+      <div style="width:2px;height:16px;background:#cbd5e0;"></div>
+      <div style="background:#fff5f5;border:1.5px solid #fc8181;border-radius:8px;padding:8px;width:100%;font-size:0.72rem;text-align:left;">
+        <div style="font-weight:700;color:#c53030;margin-bottom:3px;">🦞 HR YuQi</div>
+        <div style="color:#4a5568;">狀態更新<br>成功入職<br>系統記錄</div>
+      </div>
     </div>
+
+  </div>
   </div>
 </div>
 
