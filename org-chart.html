@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Step1ne AI 團隊組織圖</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'PingFang TC', 'Noto Sans TC', sans-serif;
+      background: #f0f4f8;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #1a365d;
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      text-align: center;
+      color: #718096;
+      font-size: 0.9rem;
+      margin-bottom: 40px;
+    }
+
+    .org { display: flex; flex-direction: column; align-items: center; }
+
+    /* 公司層 */
+    .company-box {
+      background: linear-gradient(135deg, #1a365d, #2b6cb0);
+      color: white;
+      border-radius: 12px;
+      padding: 14px 40px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 0;
+    }
+
+    .line-down {
+      width: 2px;
+      height: 30px;
+      background: #cbd5e0;
+    }
+
+    /* 顧問層 */
+    .consultants {
+      display: flex;
+      gap: 80px;
+      align-items: flex-start;
+      position: relative;
+    }
+    .consultants::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: calc(50% - 40px);
+      width: 80px;
+      height: 2px;
+      background: #cbd5e0;
+    }
+
+    .consultant-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    .consultant-box {
+      border-radius: 12px;
+      padding: 14px 28px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 1rem;
+      min-width: 140px;
+    }
+    .jacky-box {
+      background: #2b6cb0;
+      color: white;
+    }
+    .phoebe-box {
+      background: #6b46c1;
+      color: white;
+    }
+
+    .consultant-title {
+      font-size: 0.75rem;
+      opacity: 0.85;
+      font-weight: 400;
+      margin-top: 2px;
+    }
+
+    /* AI 龍蝦層 */
+    .ai-grid {
+      display: flex;
+      gap: 12px;
+      margin-top: 0;
+      align-items: flex-start;
+    }
+
+    .ai-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .ai-card {
+      border-radius: 10px;
+      padding: 12px 14px;
+      text-align: center;
+      min-width: 130px;
+      max-width: 145px;
+      border: 2px solid transparent;
+    }
+
+    /* Jacky 的龍蝦 - 藍色系 */
+    .yuqi-main {
+      background: #ebf4ff;
+      border-color: #2b6cb0;
+    }
+    .yuqi-hr {
+      background: #e6fffa;
+      border-color: #38b2ac;
+    }
+    .yuqi-mty {
+      background: #fff5f5;
+      border-color: #fc8181;
+    }
+    .yuqi-crawl {
+      background: #faf5ff;
+      border-color: #9f7aea;
+    }
+
+    /* Phoebe 的龍蝦 - 紫色系 */
+    .mike-main {
+      background: #faf5ff;
+      border-color: #6b46c1;
+    }
+    .mike-hr {
+      background: #f0fff4;
+      border-color: #48bb78;
+    }
+
+    .ai-name {
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 4px;
+    }
+    .yuqi-main .ai-name { color: #2b6cb0; }
+    .yuqi-hr .ai-name { color: #319795; }
+    .yuqi-mty .ai-name { color: #e53e3e; }
+    .yuqi-crawl .ai-name { color: #6b46c1; }
+    .mike-main .ai-name { color: #6b46c1; }
+    .mike-hr .ai-name { color: #38a169; }
+
+    .ai-role {
+      font-size: 0.72rem;
+      color: #4a5568;
+      line-height: 1.5;
+      text-align: left;
+    }
+
+    .ai-emoji {
+      font-size: 1.4rem;
+      margin-bottom: 4px;
+    }
+
+    /* 連線 */
+    .line-h {
+      height: 2px;
+      background: #cbd5e0;
+      flex: 1;
+      margin-top: 25px;
+    }
+    .line-v-short {
+      width: 2px;
+      height: 20px;
+      background: #cbd5e0;
+    }
+
+    /* 底層平台 */
+    .platform-section {
+      margin-top: 40px;
+      text-align: center;
+    }
+    .platform-label {
+      font-size: 0.8rem;
+      color: #a0aec0;
+      margin-bottom: 8px;
+    }
+    .platform-box {
+      background: linear-gradient(135deg, #2d3748, #4a5568);
+      color: white;
+      border-radius: 12px;
+      padding: 12px 40px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    .connector-row {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: center;
+      gap: 0;
+    }
+
+    .section-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 24px 0 0;
+      color: #a0aec0;
+      font-size: 0.8rem;
+    }
+    .section-divider::before,
+    .section-divider::after {
+      content: '';
+      flex: 1;
+      max-width: 120px;
+      height: 1px;
+      background: #e2e8f0;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🦞 Step1ne AI 獵頭團隊</h1>
+<p class="subtitle">人類顧問 × AI 龍蝦 協作架構</p>
+
+<div class="org">
+
+  <!-- 公司 -->
+  <div class="company-box">Step1ne 德仁管理顧問</div>
+  <div class="line-down"></div>
+
+  <!-- 顧問層 -->
+  <div style="display:flex; gap:120px; position:relative;">
+    <div style="position:absolute; top:25px; left:50%; width:120px; transform:translateX(-50%); height:2px; background:#cbd5e0;"></div>
+
+    <!-- Jacky -->
+    <div class="consultant-col">
+      <div class="consultant-box jacky-box">
+        👤 Jacky Chen
+        <div class="consultant-title">獵頭顧問</div>
+      </div>
+      <div class="line-v-short"></div>
+      <!-- Jacky 龍蝦 -->
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+
+        <div class="ai-col">
+          <div class="ai-card yuqi-main">
+            <div class="ai-emoji">🦞</div>
+            <div class="ai-name">YuQi</div>
+            <div class="ai-role">商模策略家<br>支援獵頭需求<br>匹配人選/匯入職缺<br>系統操作</div>
+          </div>
+        </div>
+
+        <div class="ai-col">
+          <div class="ai-card yuqi-hr">
+            <div class="ai-emoji">🦞</div>
+            <div class="ai-name">HR YuQi</div>
+            <div class="ai-role">監控 Step1ne<br>人選狀況<br>追蹤 Pipeline<br>狀態更新</div>
+          </div>
+        </div>
+
+        <div class="ai-col">
+          <div class="ai-card yuqi-mty">
+            <div class="ai-emoji">🦞</div>
+            <div class="ai-name">MTY YuQi</div>
+            <div class="ai-role">爬蟲人選初篩<br>新人選卡片<br>批量匯入<br>資料整理</div>
+          </div>
+        </div>
+
+        <div class="ai-col">
+          <div class="ai-card yuqi-crawl">
+            <div class="ai-emoji">🦞</div>
+            <div class="ai-name">HR AI 秘書</div>
+            <div class="ai-role">監控爬蟲系統<br>OpenClaw 驅動<br>自動化監控<br>即時推播</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Phoebe -->
+    <div class="consultant-col">
+      <div class="consultant-box phoebe-box">
+        👤 Phoebe
+        <div class="consultant-title">獵頭顧問</div>
+      </div>
+      <div class="line-v-short"></div>
+      <!-- Phoebe 龍蝦 -->
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+
+        <div class="ai-col">
+          <div class="ai-card mike-main">
+            <div class="ai-emoji">🦞</div>
+            <div class="ai-name">Mike</div>
+            <div class="ai-role">商模策略家<br>多功能協作<br>匹配人選/匯入職缺<br>系統操作</div>
+          </div>
+        </div>
+
+        <div class="ai-col">
+          <div class="ai-card mike-hr">
+            <div class="ai-emoji">🦞</div>
+            <div class="ai-name">HR Mike</div>
+            <div class="ai-role">支援 Phoebe<br>獵頭顧問需求<br>人選卡片匯入<br>職缺管理</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 底層平台 -->
+  <div class="platform-section">
+    <div class="section-divider">底層驅動平台</div>
+    <div class="line-down"></div>
+    <div class="platform-box">⚙️ OpenClaw AI Agent 平台 × Step1ne 獵頭系統</div>
+  </div>
+
+</div>
+
+</body>
+</html>
