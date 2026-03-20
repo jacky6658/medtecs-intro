@@ -450,8 +450,8 @@
   <div class="flow-title">📋 獵頭顧問工作流程 × AI 龍蝦分工</div>
   <div class="flow-subtitle">每個步驟由誰負責、龍蝦如何支援</div>
 
-  <div style="overflow-x:auto; padding-bottom:20px;">
-  <div style="display:flex; gap:0; align-items:flex-start; min-width:900px;">
+  <div style="padding-bottom:20px;">
+  <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(130px,1fr)); gap:12px;">
 
     <!-- 步驟1 BD開發 -->
     <div style="display:flex; flex-direction:column; align-items:center; flex:1;">
@@ -467,7 +467,7 @@
       </div>
     </div>
 
-    <div class="flow-arrow" style="margin-top:45px;">→</div>
+    <div class="flow-arrow" style="margin-top:45px; display:none;">→</div>
 
     <!-- 步驟2 接收JD -->
     <div style="display:flex; flex-direction:column; align-items:center; flex:1;">
@@ -483,7 +483,7 @@
       </div>
     </div>
 
-    <div class="flow-arrow" style="margin-top:45px;">→</div>
+    <div class="flow-arrow" style="margin-top:45px; display:none;">→</div>
 
     <!-- 步驟3 搜尋人選 -->
     <div style="display:flex; flex-direction:column; align-items:center; flex:1;">
@@ -499,7 +499,7 @@
       </div>
     </div>
 
-    <div class="flow-arrow" style="margin-top:45px;">→</div>
+    <div class="flow-arrow" style="margin-top:45px; display:none;">→</div>
 
     <!-- 步驟4 AI初篩 -->
     <div style="display:flex; flex-direction:column; align-items:center; flex:1;">
@@ -515,7 +515,7 @@
       </div>
     </div>
 
-    <div class="flow-arrow" style="margin-top:45px;">→</div>
+    <div class="flow-arrow" style="margin-top:45px; display:none;">→</div>
 
     <!-- 步驟5 電話初篩 -->
     <div style="display:flex; flex-direction:column; align-items:center; flex:1;">
@@ -531,7 +531,7 @@
       </div>
     </div>
 
-    <div class="flow-arrow" style="margin-top:45px;">→</div>
+    <div class="flow-arrow" style="margin-top:45px; display:none;">→</div>
 
     <!-- 步驟6 送件推薦 -->
     <div style="display:flex; flex-direction:column; align-items:center; flex:1;">
@@ -547,7 +547,7 @@
       </div>
     </div>
 
-    <div class="flow-arrow" style="margin-top:45px;">→</div>
+    <div class="flow-arrow" style="margin-top:45px; display:none;">→</div>
 
     <!-- 步驟7 安排面試 -->
     <div style="display:flex; flex-direction:column; align-items:center; flex:1;">
@@ -563,7 +563,7 @@
       </div>
     </div>
 
-    <div class="flow-arrow" style="margin-top:45px;">→</div>
+    <div class="flow-arrow" style="margin-top:45px; display:none;">→</div>
 
     <!-- 步驟8 Offer談判 -->
     <div style="display:flex; flex-direction:column; align-items:center; flex:1;">
@@ -579,7 +579,7 @@
       </div>
     </div>
 
-    <div class="flow-arrow" style="margin-top:45px;">→</div>
+    <div class="flow-arrow" style="margin-top:45px; display:none;">→</div>
 
     <!-- 步驟9 成功入職 -->
     <div style="display:flex; flex-direction:column; align-items:center; flex:1;">
@@ -659,6 +659,57 @@
     </div>
 
   </div>
+
+  <!-- Phoebe 流程補充說明 -->
+  <div style="margin-top:24px; background:#faf5ff; border:1.5px solid #d6bcfa; border-radius:12px; padding:20px;">
+    <div style="font-weight:700; color:#6b46c1; font-size:0.95rem; margin-bottom:12px;">🦞 Phoebe 團隊 — Mike 龍蝦工作流程</div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(130px,1fr)); gap:10px;">
+
+      <div style="background:white; border:1.5px solid #d6bcfa; border-radius:8px; padding:12px; text-align:center;">
+        <div style="font-size:1.2rem; margin-bottom:4px;">📞</div>
+        <div style="font-weight:700; color:#6b46c1; font-size:0.82rem; margin-bottom:3px;">BD 開發</div>
+        <div style="font-size:0.72rem; color:#4a5568;">Mike 準備話術<br>查公司資料</div>
+        <div style="margin-top:6px; background:#faf5ff; border-radius:6px; padding:4px 6px; font-size:0.7rem; color:#6b46c1; font-weight:600;">🦞 Mike</div>
+      </div>
+
+      <div style="background:white; border:1.5px solid #d6bcfa; border-radius:8px; padding:12px; text-align:center;">
+        <div style="font-size:1.2rem; margin-bottom:4px;">📄</div>
+        <div style="font-weight:700; color:#6b46c1; font-size:0.82rem; margin-bottom:3px;">接收 JD</div>
+        <div style="font-size:0.72rem; color:#4a5568;">匯入職缺<br>至 Step1ne</div>
+        <div style="margin-top:6px; background:#faf5ff; border-radius:6px; padding:4px 6px; font-size:0.7rem; color:#6b46c1; font-weight:600;">🦞 HR Mike</div>
+      </div>
+
+      <div style="background:white; border:1.5px solid #d6bcfa; border-radius:8px; padding:12px; text-align:center;">
+        <div style="font-size:1.2rem; margin-bottom:4px;">🔍</div>
+        <div style="font-weight:700; color:#6b46c1; font-size:0.82rem; margin-bottom:3px;">搜尋人選</div>
+        <div style="font-size:0.72rem; color:#4a5568;">資料庫比對<br>推薦名單</div>
+        <div style="margin-top:6px; background:#faf5ff; border-radius:6px; padding:4px 6px; font-size:0.7rem; color:#6b46c1; font-weight:600;">🦞 Mike</div>
+      </div>
+
+      <div style="background:white; border:1.5px solid #d6bcfa; border-radius:8px; padding:12px; text-align:center;">
+        <div style="font-size:1.2rem; margin-bottom:4px;">📞</div>
+        <div style="font-weight:700; color:#6b46c1; font-size:0.82rem; margin-bottom:3px;">電話初篩</div>
+        <div style="font-size:0.72rem; color:#4a5568;">準備問題<br>更新紀錄</div>
+        <div style="margin-top:6px; background:#f0fff4; border-radius:6px; padding:4px 6px; font-size:0.7rem; color:#276749; font-weight:600;">👤 Phoebe</div>
+      </div>
+
+      <div style="background:white; border:1.5px solid #d6bcfa; border-radius:8px; padding:12px; text-align:center;">
+        <div style="font-size:1.2rem; margin-bottom:4px;">📤</div>
+        <div style="font-weight:700; color:#6b46c1; font-size:0.82rem; margin-bottom:3px;">送件推薦</div>
+        <div style="font-size:0.72rem; color:#4a5568;">匿名履歷<br>寄送 Email</div>
+        <div style="margin-top:6px; background:#faf5ff; border-radius:6px; padding:4px 6px; font-size:0.7rem; color:#6b46c1; font-weight:600;">🦞 HR Mike</div>
+      </div>
+
+      <div style="background:white; border:1.5px solid #d6bcfa; border-radius:8px; padding:12px; text-align:center;">
+        <div style="font-size:1.2rem; margin-bottom:4px;">🎉</div>
+        <div style="font-weight:700; color:#6b46c1; font-size:0.82rem; margin-bottom:3px;">成功入職</div>
+        <div style="font-size:0.72rem; color:#4a5568;">Pipeline 更新<br>系統記錄</div>
+        <div style="margin-top:6px; background:#faf5ff; border-radius:6px; padding:4px 6px; font-size:0.7rem; color:#6b46c1; font-weight:600;">🦞 HR Mike</div>
+      </div>
+
+    </div>
+  </div>
+
 </div>
 
 </body>
